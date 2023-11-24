@@ -4,8 +4,8 @@ services:
     environment:
       # Use these environment variables to configure your deployment
       LANGUAGE_MESSAGE: "ru"
-      MONGODB_URI: ""  # Your MongoDB connection URI
-      MONGODB_DB_NAME: ""  # Your MongoDB DB name
+      MONGODB_URI: "mongodb://root:pass@localhost:27017/?authMechanism=DEFAULT"  # Your MongoDB connection URI
+      MONGODB_DB_NAME: "FEECC-Academy"  # Your MongoDB DB name
       ROBONOMICS_ENABLE_DATALOG: false  # Whether to enable datalog posting or not
       ROBONOMICS_ACCOUNT_SEED: ""  # Your Robonomics network account seed phrase
       ROBONOMICS_SUBSTRATE_NODE_URI: ""  # Robonomics network node URI
@@ -21,8 +21,8 @@ services:
       CAMERA_ENABLE: false  # Whether to enable Cameraman or not
       CAMERA_FFMPEG_COMMAND: ""
       WORKBENCH_NUMBER: 1  # Workbench number
-      HID_DEVICES_RFID_READER: ""  # RFID reader device name
-      HID_DEVICES_BARCODE_READER: ""  # Barcode reader device name
+      HID_DEVICES_RFID_READER: "Sample RFID Scanner"  # RFID reader device name
+      HID_DEVICES_BARCODE_READER: "Sample Barcode Scanner"  # Barcode reader device name
     build:
       context: ./
       dockerfile: Dockerfile
